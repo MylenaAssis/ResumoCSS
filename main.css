@@ -27,3 +27,16 @@ h2 {
 * {
     color: aqua;
 }
+
+/*box model
+A margem é um elemento externo, o seu tamanho não altera o tamanho definido para o elemento. Para algumas tags ela vem definida por padrão, então é possível zerar o valor caso não quera esse espaço.
+margin: 0;
+
+A borda aparece como um desenho na página, os outros elementos sao espaçamentos.
+border: tamanho estilo cor
+border: 2px solid red;
+
+padding (espaçamento interno): espaçamentoSuperior espaçamentoDireita espaçamentoInferior espaçamentoEsquerda;
+padding: 2px 3px 4px 5px;
+
+-> padding e border interferem no tamanho dos elementos, são internos.*/

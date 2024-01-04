@@ -1,7 +1,29 @@
 /* estrutura do css:
 seletor {
     classe: valor
- } */
+    } 
+O seletor pode ser uma tag, id ou classe.*/
+
+/*seletor como tag:*/
 h1 {
     color: red;
+}
+
+h2 {
+    color: green;
+}
+
+/*seletor como ID da section - usado para seleções mais específicas, o id é único na página:*/
+#economy h2 {
+    color: gold;
+}
+
+/*seletor como classe- usado para quando a formatação se repete:*/
+.creation-date {
+    color: gray;
+}
+
+/*selecionar tudo que não foi formatado na página:*/
+* {
+    color: aqua;
 }

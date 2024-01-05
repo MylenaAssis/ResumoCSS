@@ -4,6 +4,14 @@ seletor {
     } 
 O seletor pode ser uma tag, id ou classe.*/
 
+/*selecionar tudo que não foi formatado na página:*/
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
 /*seletor como tag:*/
 h1 {
     color: red;
@@ -23,10 +31,6 @@ h2 {
     color: gray;
 }
 
-/*selecionar tudo que não foi formatado na página:*/
-* {
-    color: aqua;
-}
 
 /*box model
 A margem é um elemento externo, o seu tamanho não altera o tamanho definido para o elemento. Para algumas tags ela vem definida por padrão, então é possível zerar o valor caso não quera esse espaço.
@@ -39,4 +43,7 @@ border: 2px solid red;
 padding (espaçamento interno): espaçamentoSuperior espaçamentoDireita espaçamentoInferior espaçamentoEsquerda;
 padding: 2px 3px 4px 5px;
 
--> padding e border interferem no tamanho dos elementos, são internos.*/
+-> padding e border interferem no tamanho dos elementos, são internos.
+
+
+A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. No nosso arquivo, vamos criar um reset com essa alteração e por padrão ele vai ficar no topo.*/

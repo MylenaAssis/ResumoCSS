@@ -2,17 +2,16 @@
 seletor {
     classe: valor
     } 
-O seletor pode ser uma tag, id ou classe.*/
+O seletor pode ser uma tag, id ou classe.
 
-/*selecionar tudo que não foi formatado na página:*/
+selecionar tudo que não foi formatado na página:
 * {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-
-/*seletor como tag:*/
+seletor como tag:
 h1 {
     color: red;
 }
@@ -21,18 +20,18 @@ h2 {
     color: green;
 }
 
-/*seletor como ID da section - usado para seleções mais específicas, o id é único na página:*/
+seletor como ID da section - usado para seleções mais específicas, o id é único na página:
 #economy h2 {
     color: gold;
 }
 
-/*seletor como classe- usado para quando a formatação se repete:*/
+seletor como classe- usado para quando a formatação se repete:
 .creation-date {
     color: gray;
 }
 
 
-/*box model
+box model
 A margem é um elemento externo, o seu tamanho não altera o tamanho definido para o elemento. Para algumas tags ela vem definida por padrão, então é possível zerar o valor caso não quera esse espaço.
 margin: 0;
 
@@ -47,3 +46,38 @@ padding: 2px 3px 4px 5px;
 
 
 A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. No nosso arquivo, vamos criar um reset com essa alteração e por padrão ele vai ficar no topo.*/
+
+
+/*Definição do display e uso de flexbox: 
+Formatando o menu presente no header, onde há uma lista de links:*/
+header li {
+    /*um link ao lado do outro = inline; em blocos = blocks; não exibir = none*/
+    display: inline;
+}
+
+.container {
+    /*largura do container:*/
+    width: 1000px;
+    /*centralizar container:*/
+    margin: 0 auto;
+}
+
+.articles {
+    /*organizar articles lado a lado:*/
+    display: flex;
+    /*permitir que uma nova linha seja criada quando exceder o tamanho, evitando barra de rolagem horizontal*/
+    flex-wrap: wrap;
+    /*distribuir o espaço entre os itens de uma linha de maneira igualitária:*/
+    justify-content: space-between;
+}
+
+/*definindo a largura da página, começando pelas imagens que estão nos article:*/
+.articles article img {
+    height: 180px;
+    /*ao imitar a altura, a largura vai se adaptar para manter a proporção*/
+}
+
+/*definindo o tamanho das noticias para determinar quantas aparecem por linha:*/
+.articles article {
+    width: 30%;
+}

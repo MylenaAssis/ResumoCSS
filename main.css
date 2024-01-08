@@ -81,3 +81,15 @@ header li {
 .articles article {
     width: 30%;
 }
+
+
+/*alterando a posição do elemento: 
+POSITION: absoluta, relativaou fixa. Além dessa propriedade devemos configurar as propriedades: top, right, lefte bottom.
+position: absolute => Com a posição absoluta, o elemento será posicionado de forma absoluta ao elemento que ele pertence, desde que esse elemento-pai possua a propriedade position: relative. Apesar de sua posição estática o elemento com a posição absoluta não será visível quando houver rolagem de página.
+
+top: 0 => vai deixar a imagem no alto da página, sem margem superior
+left: 0 => imagem posicionada à esquerda, sem margem
+
+position: relative => Com a posição relativa iremos posicionar um elemento de forma relativa a sua posição inicial. Esse tipo de abordagem é bastante usada quando precisamos mover um item sem que isso desloque os elementos que estão a sua volta.
+
+position: fixed = > A posição fixa irá posicionar o elemento na mesma posiçãoindependente do tamanho da tela e da rolagem da página. Exemplo: .alert{ position: fixed; bottom: 0; right: 0; } O elemento está sempre no canto inferior direito da tela, independente do tamanho da tela.

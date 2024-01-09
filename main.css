@@ -115,6 +115,7 @@ Para aplicar uma cor de fundo ao elementousamos a propriedade background-colorou
 
 header .container {
     display: flex;
+    align-items: center;
     /*colocar o título na esquerda e o menu na direita:*/
     justify-content: space-between;
 }
@@ -137,6 +138,7 @@ section h2,
 }
 
 .articles article h3 {
+    font-size: 24px;
     margin-top: 8px;
     margin-bottom: 8px;
 }
@@ -147,4 +149,40 @@ section h2,
     padding: 4px;
     /*o elemento a tem por padrão o display inline, isso pode causar sobreposição de elemento. Corrigindo:*/
     display: inline-block;
+    /*removendo o sublinhado do link*/
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/*aparecer sublinhado quando passar o cursor no link:*/
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: helvetica, sans-serif;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+/*colorindo a seção com rgba (red green blue alpha_transparencia)*/
+#Sports {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#Sports .articles article a {
+    background-color: rgba(200, 255, 200, 30);
+    color: black;
+}
+
+#Economy {
+    background-color: rgba(200, 0, 30, 0.1);
+}
+
+#Economy .articles article a {
+    background-color: red;
 }

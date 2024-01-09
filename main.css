@@ -55,6 +55,11 @@ header li {
     display: inline;
 }
 
+header li a {
+    color: #a69191;
+    align-items: center;
+}
+
 .container {
     /*largura do container:*/
     width: 1000px;
@@ -93,3 +98,53 @@ left: 0 => imagem posicionada à esquerda, sem margem
 position: relative => Com a posição relativa iremos posicionar um elemento de forma relativa a sua posição inicial. Esse tipo de abordagem é bastante usada quando precisamos mover um item sem que isso desloque os elementos que estão a sua volta.
 
 position: fixed = > A posição fixa irá posicionar o elemento na mesma posiçãoindependente do tamanho da tela e da rolagem da página. Exemplo: .alert{ position: fixed; bottom: 0; right: 0; } O elemento está sempre no canto inferior direito da tela, independente do tamanho da tela.
+
+
+
+Aplicando cores:
+Para aplicar uma cor a um textofazemos o uso da propriedade color: 
+p { 
+    color: #333333; 
+} 
+Para aplicar uma cor de fundo ao elementousamos a propriedade background-colorou apenas background: 
+.header {
+    background-color: red; 
+} 
+
+*/
+
+header .container {
+    display: flex;
+    /*colocar o título na esquerda e o menu na direita:*/
+    justify-content: space-between;
+}
+
+/*o header é utilizado varias vezes, por isso sinalizamos que a cor vai apenas para o header que é filho do body. O parametro foi aplicado apenas ao titulo da pagina*/
+body > header {
+    background-color: rgb(147, 46, 46);
+    padding: 16px 0px;
+    color: #a69191;
+}
+
+section {
+    padding: 16px 0px;
+}
+
+/*aproveitando a mesma regra para 2 seletores*/
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: rgb(218, 148, 148);
+    color: #fff;
+    padding: 4px;
+    /*o elemento a tem por padrão o display inline, isso pode causar sobreposição de elemento. Corrigindo:*/
+    display: inline-block;
+}
